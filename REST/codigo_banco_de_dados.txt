@@ -1,0 +1,31 @@
+1- CREATE DATABASE opus
+
+2- TABELA DE CLIENTES
+
+CREATE TABLE `opus`.`cliente` ( `codigo` INT NOT NULL , `nome` TEXT NOT NULL , `cpf` TEXT NOT NULL , `email` TEXT NOT NULL , `telefone` TEXT NOT NULL , `endereco` TEXT NOT NULL , `data_de_nascimento` TEXT NOT NULL , PRIMARY KEY (`codigo`)) ENGINE = InnoDB;
+
+TABELA DE AUTONOMOS
+
+CREATE TABLE `opus`.`autonomo` ( `codigo` INT NOT NULL , `nome` TEXT NOT NULL , `email` TEXT NOT NULL , `telefone` TEXT NOT NULL , `endereco` TEXT NOT NULL , `profissao` TEXT NOT NULL , PRIMARY KEY (`codigo`)) ENGINE = InnoDB;
+
+3- INSERT NOS AUTONOMOS
+
+INSERT INTO `autonomo`(`codigo`, `nome`, `email`, `telefone`, `endereco`, `profissao`) VALUES ('1','weber','weber@weber.com.br','43 99666-6924','rua santos, 354','carpinteiro')
+
+INSERT INTO `autonomo`(`codigo`, `nome`, `email`, `telefone`, `endereco`, `profissao`) VALUES ('2','lauro','lauro@gmail.com','43 96924-6666','rua higienopolis, 856','pedreiro')
+
+INSERT INTO `autonomo`(`codigo`, `nome`, `email`, `telefone`, `endereco`, `profissao`) VALUES ('3','carlo','carlo@hotmail.com','43 99999-4422','rua das pitangas, 666','pintor')
+
+INSERT NOS CLIENTES
+
+INSERT INTO `cliente`(`codigo`, `nome`, `cpf`, `email`, `telefone`, `endereco`, `data_de_nascimento`) VALUES ('1','paulo','321876543-65','paulo@gmail.com','43 99966-6249','rua avieira, 654','21/5/1987')
+
+INSERT INTO `cliente`(`codigo`, `nome`, `cpf`, `email`, `telefone`, `endereco`, `data_de_nascimento`) VALUES ('2','otton','438321776-43','otton22@gmail.com','43 99666-6249','rua clovis basilio, 69','31/3/1969')
+
+INSERT INTO `cliente`(`codigo`, `nome`, `cpf`, `email`, `telefone`, `endereco`, `data_de_nascimento`) VALUES ('3','joshua','482471659-32','joshua66@hotmail.com','43 96453-7431','rua vladimir, 42','21/6/1999')
+
+4- SELECT `codigo`, `nome` FROM `cliente` WHERE codigo ='1';
+
+5- DELETE FROM `cliente` WHERE nome = 'joshua'
+
+DROP TABLE autonomo
